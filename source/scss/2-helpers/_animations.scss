@@ -1,0 +1,43 @@
+// @keyframes spaceships {
+//     0% {
+//         transform: scale(0.5) translate(0, 0) rotate(0);
+//     }
+
+//     25% {
+//         transform: scale(0.5) translate(0, 0) rotate(10deg);
+//     }
+
+//     50% {
+//         transform: scale(0.5) translate(0, 0) rotate(0);
+//     }
+
+//     75% {
+//         transform: scale(0.5) translate(0, 0) rotate(-10deg);
+//     }
+// }
+
+
+@keyframes hover {
+    50% {
+      transform:translateY(-3px); 
+    }
+    100% {
+      transform:translateY(-6px);
+    }
+}
+@keyframes shadow {
+    0% {
+            transform: translateY(6px);
+            opacity: .4;
+    }
+
+    50% {
+            transform: translateY(3px);
+            opacity: 1;
+    }
+
+    100% {
+            transform: translateY(6px);
+            opacity: .4;
+    }
+}

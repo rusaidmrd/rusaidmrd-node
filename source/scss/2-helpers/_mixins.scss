@@ -1,0 +1,14 @@
+@mixin sectionPadding {
+  padding: 60px 0;
+}
+
+//disable the highlighting effect when an element is tapped
+@mixin disableTapHighlightColor() {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+//improve performance when doing transitions
+@mixin hardwareAccel() {
+	transform: translateZ(0);
+}
+

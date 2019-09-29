@@ -1,0 +1,113 @@
+.portfolio {
+    padding: 65px 0px;
+
+    .title-wrapper {
+        text-align: center;
+    }
+
+    .portfolio-inner-wrap {
+        margin-top: 70px;
+        .single-portfolio {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            .img-wrap {
+                img {
+                    width: 110%;
+                }
+            }
+            .info-wrap {
+                align-self: center;
+                text-align: center;
+                p {
+                    margin:20px auto 40px auto;
+                    width: 70%;
+                    font-size: 16px;
+                }
+            }
+        } // end of single-portfolio
+    } // end of portfolio-inner-wrap
+
+} // end of portfolio
+
+
+@media screen and (max-width:1200px){
+    .portfolio {
+  
+        .portfolio-inner-wrap {
+            margin-top: 70px;
+            .single-portfolio {
+                
+                .img-wrap {
+                    img {
+                        width: 110%;
+                    }
+                }
+                .info-wrap {
+                    
+                    p {
+                        margin:20px auto 40px auto;
+                        width: 70%;
+                        font-size: 14px;
+                    }
+                }
+            } // end of single-portfolio
+        } // end of portfolio-inner-wrap
+    
+    } // end of portfolio
+}
+
+@media screen and (max-width:992px){
+    .portfolio {
+  
+        .portfolio-inner-wrap {
+            margin-top: 70px;
+            .single-portfolio {
+                grid-column-gap: 20px;
+                .img-wrap {
+                    img {
+                        width: 110%;
+                    }
+                }
+                .info-wrap {
+                    
+                    p {
+                        margin:20px auto 40px auto;
+                        width: 90%;
+                        font-size: 12px;
+                    }
+                }
+            } // end of single-portfolio
+        } // end of portfolio-inner-wrap
+    
+    } // end of portfolio
+}
+
+
+@media screen and (max-width:767px){
+    .portfolio {
+  
+        .portfolio-inner-wrap {
+            margin-top: 70px;
+            .single-portfolio {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                .img-wrap {
+                    text-align: center;
+                    img {
+                        width: 80%;
+                    }
+                }
+                .info-wrap {
+                    
+                    p {
+                        margin:20px auto 40px auto;
+                        width: 80%;
+                        font-size: 14px;
+                    }
+                }
+            } // end of single-portfolio
+        } // end of portfolio-inner-wrap
+    
+    } // end of portfolio
+}

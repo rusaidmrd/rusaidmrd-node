@@ -1,0 +1,368 @@
+.skills-wrapper {
+    background: url('../img/skills-back.png') no-repeat;
+    background-position: center top;
+    background-size: 105% 130%;
+    padding: 75px 0px 75px 0px;
+
+    .skill-wrap {
+        .title-wrapper {
+            text-align: center;
+            margin-bottom: 70px;
+            h2 {
+                color: $color-text-light;
+            }
+        } // end of title-wrapper
+
+        .icon-wrapper {
+            margin: 0px auto 40px auto;
+            display: flex;
+            width: 90%;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .icon-wrap {
+                text-align: center;
+                margin-bottom: 45px;
+                margin-right: 15px;
+                img {
+                    width: 65%;
+                }
+            }
+
+        } // end of icon-wrapper
+
+
+        .skill-note {
+            //margin-top: 60px;
+
+            .note {
+                background-color: $background-light;
+                display: flex;
+                padding: 50px;
+                margin:0 auto 30px auto;
+                width: 80%;
+                border-radius: 6px;
+                position: relative;
+                transition: all 0.4s ease-in-out;
+                
+                -webkit-box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.15);
+                -moz-box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.15);
+                box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.15);
+                //z-index: 1;
+
+                .cover-top {
+                    position:absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height:0;
+                    background: $secondary-light;
+                    border-radius: 6px;
+
+                    //z-index: 2;
+                }
+
+                &:hover {
+                    // .cover-top {
+                    //     height: 100%;
+                    // }
+                    background: $secondary-light;
+                }
+
+                .ic-wrap {
+                    //z-index: 3;
+                    img {
+                        width:100%;
+                    }
+                }
+
+                .nt-wrap {
+                    //z-index: 3;
+                    margin-left: 30px;
+                    p {
+                        font-size: 16px;
+                        color: $color-text;
+                    }
+                }
+
+            } // end of note
+
+        } // end of skill-note
+
+    } // end of skill-wrap
+} // end of skills-wrapper
+
+
+@media screen and (max-width:1200px){
+    .skills-wrapper {
+ 
+        .skill-wrap {
+            .icon-wrapper {
+                width: 100%;
+    
+                .icon-wrap {
+                    margin-bottom: 35px;
+                    margin-right: 5px;
+                    img {
+                        width: 55%;
+                    }
+                }
+    
+            } // end of icon-wrapper
+    
+    
+            .skill-note {
+
+                .note {
+                    padding: 50px;
+                    margin:0 auto 30px auto;
+                    width: 80%;
+    
+                    .ic-wrap {
+                        img {
+                            width:100%;
+                        }
+                    }
+    
+                    .nt-wrap {
+                        margin-left: 30px;
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+    
+                } // end of note
+    
+            } // end of skill-note
+    
+        } // end of skill-wrap
+    } // end of skills-wrapper
+}
+
+
+
+@media screen and (max-width:1145px){
+    .skills-wrapper {
+        background-size: 120% 140%;
+    }
+}
+
+@media screen and (max-width:992px){
+    .skills-wrapper {
+        background-size: 150% 140%;
+
+        .skill-wrap {
+
+            .icon-wrapper {    
+                .icon-wrap {
+                    margin-bottom: 25px;
+                }
+    
+            } // end of icon-wrapper
+           
+            .skill-note {
+                .note {  
+                    .ic-wrap {
+                        img {
+                            width:150%;
+                        }
+                    }
+    
+                    .nt-wrap {
+                        margin-left: 40px;
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+    
+                } // end of note
+    
+            } // end of skill-note
+    
+        } // end of skill-wrap
+
+        
+    } // skills-wrapper
+}
+
+
+@media screen and (max-width:767px){
+    .skills-wrapper {
+        background: $primary-light;
+
+        .skill-wrap {
+
+            .title-wrapper {
+                margin-bottom: 70px;
+                h2 {
+                   font-size: 36px;
+                }
+            } // end of title-wrapper
+
+            .icon-wrapper {    
+                display:flex;
+                //background: white;
+                
+                .icon-wrap {
+                    margin-bottom: 75px;
+                    margin-right: 40px;
+                    img {
+                        width: 80%;
+                    }
+                }
+    
+            } // end of icon-wrapper
+           
+            .skill-note {
+                .note {  
+                    .ic-wrap {
+                        img {
+                            width:250%;
+                        }
+                    }
+    
+                    .nt-wrap {
+                        margin-left: 60px;
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+    
+                } // end of note
+    
+            } // end of skill-note
+    
+        } // end of skill-wrap
+
+        
+    } // skills-wrapper
+}
+
+
+@media screen and (max-width:595px){
+    .skills-wrapper {
+        .skill-wrap {
+
+            .title-wrapper {
+                margin-bottom: 70px;
+                h2 {
+                   font-size: 27px;
+                }
+            } // end of title-wrapper
+        }
+    }
+}
+
+
+
+@media screen and (max-width:425px){
+    .skills-wrapper {
+
+        .skill-wrap {
+
+            .title-wrapper {
+                margin-bottom: 70px;
+                h2 {
+                   font-size: 36px;
+                }
+            } // end of title-wrapper
+
+            .icon-wrapper {    
+                display:block;
+                //background: white;
+                margin-bottom: 40px;
+                
+                .icon-wrap {
+                    margin-bottom: 65px;
+                    margin-right: 40px;
+                    img {
+                        width:85px;
+                        height: 42px;
+                    }
+                }
+
+                .ic-jvs {
+                    img {
+                        width: 140px;
+                        height: 42px;
+                    }
+                }
+
+                .ic-php {
+                    img {
+                        width: 60px;
+                        height: 60px;;
+                    }
+                }
+
+                .ic-node {
+                    img {
+                        width:100px;
+                        height: 60px;
+                    }
+                }
+
+                .ic-mdb {
+                    img {
+                        width: 140px;
+                        height: 42px;
+                    }
+                }
+
+                .ic-react {
+                    img {
+                        width: 140px;
+                        height: 54px;
+                    }
+                }
+
+                .ic-api {
+                    img {
+                        width:70px;
+                        height: 70px;
+                    }
+                }
+
+                .ic-wordpress{
+                    img {
+                        width:160px;
+                        height: 45px;
+                    }
+                }
+
+                .ic-server {
+                    img {
+                        width: 160px;
+                        height: 38px;
+                    }
+                }
+    
+            } // end of icon-wrapper
+           
+            .skill-note {
+                .note {  
+                    flex-direction: column;
+                    text-align: center;
+                    .ic-wrap {
+                        margin-bottom: 30px;
+                        img {
+                            width:50%;
+                        }
+                    }
+    
+                    .nt-wrap {
+                        margin: 0;
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+    
+                } // end of note
+    
+            } // end of skill-note
+    
+        } // end of skill-wrap
+
+        
+    } // skills-wrapper
+}
