@@ -20,7 +20,6 @@ var scroll = new SmoothScroll('a[href*="#"]');
 
 
 // detect the scroll
-
 function showScrollButton() {
     var scroll = document.getElementById('scroll-up');
     var y = window.scrollY;

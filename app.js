@@ -4,6 +4,9 @@ const hbs = require('express-handlebars');
 const path = require('path');
 const nodemailer = require('nodemailer');
 
+const ENV = require('dotenv');
+ENV.config();
+
 
 const app = express();
 
@@ -75,4 +78,4 @@ app.post('/send', (req, res) => {
 
 });
 
-app.listen(PORT, () => console.log('Server Started'));
+app.listen(PORT, () => console.log('Server Started at ' + PORT));
