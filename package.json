@@ -1,7 +1,7 @@
 {
-    "name": "mrd-front-end-starter",
+    "name": "rusaid-mrd-personal-site",
     "version": "1.0.0",
-    "description": "Starter Project for front end web development",
+    "description": "Personal website for freelance web services | Rusaid MRD",
     "main": "index.html",
     "scripts": {
         "start": "node app.js",
@@ -28,6 +28,7 @@
         "gulp-sass": "^4.0.2",
         "gulp-sourcemaps": "^2.6.4",
         "gulp-uglify": "^3.0.0",
+        "node-sass": "^4.12.0",
         "sal.js": "^0.6.2",
         "scrollreveal": "^3.3.6",
         "smooth-scroll": "^16.1.0"
