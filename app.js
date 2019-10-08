@@ -46,11 +46,11 @@ app.post('/send', (req, res) => {
 
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
-        host: 'mail.gmtranslationdoha.com',
+        host: 'mail.rusaidmrd.com',
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
-            user: 'info@gmtranslationdoha.com', // generated ethereal user
+            user: 'me@rusaidmrd.com', // generated ethereal user
             pass: 'k4J6Z18hhi286998' // generated ethereal password
         },
         tls: {
@@ -61,7 +61,7 @@ app.post('/send', (req, res) => {
 
     // send mail with defined transport object
     let mailOptions = {
-        from: '"gmtranslationdoha.com contact 👻" <info@gmtranslationdoha.com>', // sender address
+        from: '"me@rusaidmrd.com contact 👻" <me@rusaidmrd.com>', // sender address
         to: 'rusaidpro@gmail.com', // list of receivers
         subject: 'Email from rusaidmrd.com ✔', // Subject line
         text: 'Hello world?', // plain text body
