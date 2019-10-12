@@ -283,6 +283,9 @@
                 right:0;
                 //background: rgba(0,0,0,.9);
                 transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+                -webkit-transform: translateX(99.5%);
+                -moz-transform: translateX(99.5%);
+                -o-transform: translateX(99.5%);
                 transform: translateX(99.5%);
                 z-index: 9;
 
@@ -292,10 +295,16 @@
                     animation: menu-anim 0.5s 1 ease-out normal;
                     width: 100%;
                     transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+                    -webkit-transform: translateX(0);
+                    -moz-transform: translateX(0);
+                    -o-transform: translateX(0);
                     transform: translateX(0);
 
                     &.reverse-anim {
-                        transform: translateX(99.5%);
+                      -webkit-transform: translateX(99.5%);
+                      -moz-transform: translateX(99.5%);
+                      -o-transform: translateX(99.5%);
+                      transform: translateX(99.5%);
                         animation: menu-anim 0.5s 1 ease-out reverse;
                         width: 100%;
                         transition: all 0.5s cubic-bezier(0.77,0.2,0.05,1.0);

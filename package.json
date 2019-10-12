@@ -5,7 +5,7 @@
     "main": "index.html",
     "scripts": {
         "start": "node app.js",
-        "gulp": "gulp",
+        "gulp": "gulp watch",
         "minify": "gulp minify"
     },
     "author": "Rusaid MRD",
@@ -13,6 +13,7 @@
     "devDependencies": {
         "@babel/core": "^7.6.0",
         "@babel/preset-env": "^7.6.0",
+        "autoprefixer": "^9.6.4",
         "browser-sync": "^2.26.7",
         "del": "^1.2.0",
         "gulp": "^4.0.0",
@@ -24,6 +25,7 @@
         "gulp-imagemin": "^5.0.3",
         "gulp-minify-css": "1.2.4",
         "gulp-plumber": "^1.2.0",
+        "gulp-postcss": "^8.0.0",
         "gulp-rename": "^1.2.2",
         "gulp-sass": "^4.0.2",
         "gulp-sourcemaps": "^2.6.4",
@@ -43,6 +45,7 @@
         "natives": "^1.1.6",
         "nodemailer": "^6.3.0",
         "nodemon": "^1.19.3",
-        "sweetalert": "^2.1.2"
+        "sweetalert": "^2.1.2",
+        "tailwindcss": "^1.1.2"
     }
 }

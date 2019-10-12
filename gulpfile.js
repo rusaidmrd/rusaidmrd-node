@@ -15,8 +15,10 @@ var gulp = require('gulp'),
 
 // compile scss into css
 function cssStyle() {
+
   // 1. find the scss source file
   return gulp.src('./source/scss/**/*.scss')
+
 
     // 2. pass that file through sass compailer
     .pipe(sass().on('error', sass.logError))
@@ -42,6 +44,22 @@ function scripts() {
 }
 
 
+function configureTailwindCss() {
+  const postcss = require('gulp-postcss')
+
+  return gulp.src('./source/styles-tailwind.css')
+    // ...
+    .pipe(postcss([
+      // ...
+      require('tailwindcss'),
+      require('autoprefixer'),
+      // ...
+    ]))
+    // ...
+    .pipe(gulp.dest('build/assets/css'))
+
+}
+
 function watch() {
   // browserSync.init({
   //   server: {
@@ -49,6 +67,7 @@ function watch() {
   //   }
   // });
   gulp.watch('./source/scss/**/*.scss', cssStyle);
+  gulp.watch('./source/styles-tailwind.css', configureTailwindCss);
   //gulp.watch('./views/*.html').on('change', browserSync.reload);
   gulp.watch('./source/js/**/*.js', scripts);
   gulp.watch('./source/js/**/*.js').on('change', browserSync.reload);
