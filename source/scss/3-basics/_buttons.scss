@@ -87,6 +87,7 @@ button {
 
 
 .mrd-btn {
+  font-weight: bold;
   &:hover {
     transform:translateY(-3px);
     box-shadow: 0px 10px 20px rgba(0,0,0,.2);
@@ -109,19 +110,40 @@ button {
     
 @media screen and (min-width:992px) and (max-width:1200px) {
     .mrd-btn {
-      padding: 15px 26px;
+      padding: 27px 50px;
+      font-size: 27px;
+      border-radius: 21px;
     }
 }
 
 @media screen and (min-width:767px) and (max-width:991px)  {
   .mrd-btn {
-    padding: 14px 25px;
+    padding: 24px 46px;
+    font-size: 23px;
+    border-radius: 12px;
   }
 }
 
-@media screen and (max-width:390px) {
+
+@media screen and (min-width:530px) and (max-width:650px){
+    .mrd-btn {
+      padding: 24px 46px;
+      font-size: 23px;
+      border-radius: 12px;
+    }
+}
+
+
+@media screen and (max-width:360px) {
   .mrd-btn {
-    padding: 10px 22px;
+    padding: 16px 25px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .mrd-btn {
+    padding: 12px 22px;
     font-size: 12px;
   }
 }

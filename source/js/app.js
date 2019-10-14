@@ -4,9 +4,17 @@ var icon_active_btn = $('.icon-active');
 icon_btn.on('click', function () {
     $(this).toggleClass('icon-active');
     $(this).toggleClass('not-active');
-
-    $('.nav-wrap').toggleClass('anim');
+    $('.nav-wrapper').toggleClass('open');
+    console.log('sjhbjdjsnjdbcjdbcwjdsbcjbdcsj ' + $('.nav-wrapper').siblings('open').length);
 });
+
+
+$('.nav-menu li a').on('click', function () {
+    $('.nav-wrapper').removeClass('open');
+    icon_btn.removeClass('icon-active');
+    icon_btn.addClass('not-active');
+});
+
 
 // initiate the sal.js
 sal({
@@ -21,6 +29,18 @@ var scroll = new SmoothScroll('a[href*="#"]');
 
 // detect the scroll
 function showScrollButton() {
+
+    if ($('.nav-wrapper').hasClass('open')) {
+        $('.toggle-wrapper .icon-wrap').css({
+            'position': 'fixed'
+        });
+    } else {
+        $('.toggle-wrapper .icon-wrap').css({
+            'position': 'absolute'
+        });
+    }
+
+
     var scroll = document.getElementById('scroll-up');
     var y = window.scrollY;
     if (y >= 500) {
