@@ -16,24 +16,51 @@
         width: 20px;
         height: 20px;
         background:rgba($secondary-dark,.1);
-        animation: myOrbit 15s linear infinite;
+        // animation: myOrbit 15s linear infinite;
         top:150px;
         z-index: 10000;
 
         &:nth-child(1){
+            top: 40%;
             left: 25%;
-            width: 25px;
-            height: 25px;
+            width: 15px;
+            height: 15px;
             border-radius: 100%;
+            background: rgba($primary-light,0.5);
+            animation: animation-c1 45s linear infinite;
             //animation-delay: 1s;
         }
 
 
         &:nth-child(2){
+            top:80%;
             left: 65%;
-            width: 30px;
-            height: 30px;
+            width: 18px;
+            height: 18px;
             border-radius: 100%;
+            background: rgba($secondary-next,.5);
+            animation: animation-c2 50s linear infinite;
+            //animation-delay: 4s;
+        }
+
+        &:nth-child(3){
+            top: 50%;
+            right: 15%;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background: rgba($secondary-next,.5);
+            animation: animation-c3 55s linear infinite;
+            //animation-delay: 4s;
+        }
+
+        &:nth-child(4){
+            right: 65%;
+            width: 18px;
+            height: 18px;
+            border-radius: 100%;
+            background: rgba($primary-light,.5);
+            animation: animation-c4 60s linear infinite;
             //animation-delay: 4s;
         }
     }
@@ -42,39 +69,117 @@
 }
 
 
-// @keyframes animate_buubles
-// {
-//     0%
-//     {
-//         transform: translateY(0) rotate(0deg);
-//         opacity: 1;
-//         border-radius: 0;
-//     }
-//     25%
-//     {
-
-//     }
-//     50%
-//     {
-
-//     }
-//     75%
-//     {
-
-//     }
-//     100%
-//     {
-//         transform: translateY(-1000px) rotate(720deg);
-//         opacity: 0;
-//         border-radius: 50%;
-//     }
-// }
-
-@keyframes myOrbit {
-    from { 
-        transform: rotate(0deg) translateX(150px) rotate(0deg); 
+@keyframes animation-c1 {
+    0%
+    {
+        top: 40%;
+        left: 25%;
     }
-    to   { 
-        transform: rotate(360deg) translateX(150px) rotate(-360deg); 
+    25%
+    {
+        top: 45%;
+        left: 30%;
+    }
+    50%
+    {
+        top: 65%;
+        left: 25%;
+    }
+    75%
+    {
+        top: 20%;
+        left: 15%;
+    }
+    100%
+    {
+        top: 40%;
+        left: 25%;
+    }
+}
+
+
+@keyframes animation-c2 {
+    0%
+    {
+        top: 80%;
+        left: 65%;
+    }
+    25%
+    {
+        top: 85%;
+        left: 30%;
+    }
+    50%
+    {
+        top: 35%;
+        left: 25%;
+    }
+    75%
+    {
+        top: 70%;
+        left: 15%;
+    }
+    100%
+    {
+        top: 80%;
+        left: 65%;
+    }
+}
+
+
+@keyframes animation-c3 {
+    0%
+    {
+        top: 50%;
+        right: 15%;
+    }
+    25%
+    {
+        top: 20%;
+        right: 45%;
+    }
+    50%
+    {
+        top: 60%;
+        right: 25%;
+    }
+    75%
+    {
+        top: 80%;
+        right: 85%;
+    }
+    100%
+    {
+        top: 50%;
+        right: 15%;
+    }
+}
+
+
+@keyframes animation-c4 {
+    0%
+    {
+        top: 150px;
+        right: 65%;
+    }
+    25%
+    {
+        top: 50%;
+        right: 75%;
+    }
+    50%
+    {
+        top: 30%;
+        right: 45%;
+    }
+    75%
+    {
+        top: 80%;
+        right: 25%;
+    }
+    100%
+    {
+        top: 150px;
+        right: 65%;
     }
 }

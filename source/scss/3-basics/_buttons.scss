@@ -34,7 +34,7 @@
   input[type="submit"],
   input[type="reset"],
   input[type="button"] {
-    background-color: $primary-dark;
+    background-color: $secondary-dark;
     padding: 18px 40px;
     color:$color-text-light;
     border-radius: 6px;
@@ -71,7 +71,7 @@ button {
     display: inline-block;
     height: 100%;
     width: 100%;
-    background: $primary-dark;
+    background: $secondary-dark;
     position: absolute;
     top:0;
     left: 0;
