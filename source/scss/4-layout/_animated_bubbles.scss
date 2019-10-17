@@ -27,7 +27,7 @@
             height: 15px;
             border-radius: 100%;
             background: rgba($primary-light,0.5);
-            animation: animation-c1 45s linear infinite;
+            animation: animation-c1 50s linear infinite;
             //animation-delay: 1s;
         }
 
@@ -50,7 +50,7 @@
             height: 10px;
             border-radius: 100%;
             background: rgba($secondary-next,.5);
-            animation: animation-c3 55s linear infinite;
+            animation: animation-c3 50s linear infinite;
             //animation-delay: 4s;
         }
 
@@ -60,7 +60,7 @@
             height: 18px;
             border-radius: 100%;
             background: rgba($primary-light,.5);
-            animation: animation-c4 60s linear infinite;
+            animation: animation-c4 50s linear infinite;
             //animation-delay: 4s;
         }
     }
@@ -72,28 +72,23 @@
 @keyframes animation-c1 {
     0%
     {
-        top: 40%;
-        left: 25%;
+        transform: translate(50px,100px);
     }
     25%
     {
-        top: 45%;
-        left: 30%;
+        transform: translate(220px,300px);
     }
     50%
     {
-        top: 65%;
-        left: 25%;
+        transform: translate(400px,60px);
     }
     75%
     {
-        top: 20%;
-        left: 15%;
+        transform: translate(520px,370px);
     }
     100%
     {
-        top: 40%;
-        left: 25%;
+        transform: translate(50px,100px);
     }
 }
 
@@ -101,28 +96,23 @@
 @keyframes animation-c2 {
     0%
     {
-        top: 80%;
-        left: 65%;
+        transform: translate(10px,10px);
     }
     25%
     {
-        top: 85%;
-        left: 30%;
+        transform: translate(20px,-30px);
     }
     50%
     {
-        top: 35%;
-        left: 25%;
+        transform: translate(200px,-450px);
     }
     75%
     {
-        top: 70%;
-        left: 15%;
+        transform: translate(120px,-170px);
     }
     100%
     {
-        top: 80%;
-        left: 65%;
+        transform: translate(10px,10px);
     }
 }
 
@@ -130,28 +120,23 @@
 @keyframes animation-c3 {
     0%
     {
-        top: 50%;
-        right: 15%;
+        transform: translate(150px,160px);
     }
     25%
     {
-        top: 20%;
-        right: 45%;
+        transform: translate(-220px,300px);
     }
     50%
     {
-        top: 60%;
-        right: 25%;
+        transform: translate(-400px,60px);
     }
     75%
     {
-        top: 80%;
-        right: 85%;
+        transform: translate(220px,370px);
     }
     100%
     {
-        top: 50%;
-        right: 15%;
+        transform: translate(150px,160px);
     }
 }
 
@@ -159,27 +144,22 @@
 @keyframes animation-c4 {
     0%
     {
-        top: 150px;
-        right: 65%;
+        transform: translate(150px,160px);
     }
     25%
     {
-        top: 50%;
-        right: 75%;
+        transform: translate(520px,100px);
     }
     50%
     {
-        top: 30%;
-        right: 45%;
+        transform: translate(-400px,160px);
     }
     75%
     {
-        top: 80%;
-        right: 25%;
+        transform: translate(220px,370px);
     }
     100%
     {
-        top: 150px;
-        right: 65%;
+        transform: translate(150px,160px);
     }
 }

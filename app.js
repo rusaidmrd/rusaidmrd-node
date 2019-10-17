@@ -9,9 +9,8 @@ ENV.config();
 
 
 const app = express();
-
 const PORT = process.env.PORT || 3000;
-
+const baseUrl = 'http://localhost:3000';
 // view engine setup
 app.engine('handlebars', hbs());
 app.set('view engine', 'handlebars');
@@ -40,43 +39,63 @@ app.post('/send', (req, res) => {
         <p>${req.body.message}</p>
     `;
 
+    const sgMail = require('@sendgrid/mail');
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    const msg = {
+        to: 'rusaidpro@gmail.com',
+        from: req.body.email,
+        subject: 'Email from rusaidmrd.com',
+        text: 'Freelance web developer',
+        html: output,
+    };
+
+    sgMail
+        .send(msg, (error, result) => {
+            if (error) {
+                console.log(error);
+            }
+            else {
+                res.redirect(baseUrl);
+            }
+        });
+
     // console.log('Name is : ' + req.body.name);
     // console.log('Email is : ' + req.body.email);
     // console.log('Message is : ' + req.body.message);
 
     // create reusable transporter object using the default SMTP transport
-    let transporter = nodemailer.createTransport({
-        host: 'mail.rusaidmrd.com',
-        port: 465,
-        secure: true, // true for 465, false for other ports
-        auth: {
-            user: 'me@rusaidmrd.com', // generated ethereal user
-            pass: 'k4J6Z18hhi286998' // generated ethereal password
-        },
-        tls: {
-            // do not fail on invalid certs
-            rejectUnauthorized: false
-        }
-    });
+    // let transporter = nodemailer.createTransport({
+    //     host: 'mail.rusaidmrd.com',
+    //     port: 465,
+    //     secure: true, // true for 465, false for other ports
+    //     auth: {
+    //         user: 'me@rusaidmrd.com', // generated ethereal user
+    //         pass: 'k4J6Z18hhi286998' // generated ethereal password
+    //     },
+    //     tls: {
+    //         // do not fail on invalid certs
+    //         rejectUnauthorized: false
+    //     }
+    // });
 
-    // send mail with defined transport object
-    let mailOptions = {
-        from: '"me@rusaidmrd.com contact 👻" <me@rusaidmrd.com>', // sender address
-        to: 'rusaidpro@gmail.com', // list of receivers
-        subject: 'Email from rusaidmrd.com ✔', // Subject line
-        text: 'Hello world?', // plain text body
-        html: output // html body
-    };
+    // // send mail with defined transport object
+    // let mailOptions = {
+    //     from: '"me@rusaidmrd.com contact 👻" <me@rusaidmrd.com>', // sender address
+    //     to: 'rusaidpro@gmail.com', // list of receivers
+    //     subject: 'Email from rusaidmrd.com ✔', // Subject line
+    //     text: 'Hello world?', // plain text body
+    //     html: output // html body
+    // };
 
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.log(error)
-        }
-        console.log('Message sent: %s', info.messageId);
-        console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-        res.render('index', { msg: 'Email has been sent' });
+    // transporter.sendMail(mailOptions, (error, info) => {
+    //     if (error) {
+    //         console.log(error)
+    //     }
+    //     console.log('Message sent: %s', info.messageId);
+    //     console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+    //     res.render('index', { msg: 'Email has been sent' });
 
-    });
+    // });
 
 
 
