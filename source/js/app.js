@@ -30,6 +30,8 @@ var scroll = new SmoothScroll('a[href*="#"]');
 // detect the scroll
 function showScrollButton() {
 
+    $('.alert-wrapper').hide();
+
     if ($('.nav-wrapper').hasClass('open')) {
         $('.toggle-wrapper .icon-wrap').css({
             'position': 'fixed'

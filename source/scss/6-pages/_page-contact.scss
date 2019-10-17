@@ -6,6 +6,9 @@
     background: url('../img/bottom-background.png') no-repeat;
     background-size: 2000px auto;
     background-position: bottom;
+    position: relative;
+
+
 
     // &::after{
     //     content: "";
@@ -43,7 +46,7 @@
            margin: 0px auto 40px auto;
            padding: 9% 8% 7% 8%;
            border-radius: 15px;
-
+          
             .form {
                 .form-g {
                     &:not(:last-child){

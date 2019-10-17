@@ -1,6 +1,23 @@
 .header-wrapper {
     height: 100vh;
+    position: relative;
     
+    .alert-wrapper {
+        position: absolute;
+        top:2%;
+        right: 3%;
+
+        .form-alert {
+             background:$olive;
+             display: flex;
+             flex-direction: column;
+             border: none;
+             border-radius: 6px;
+             padding: 1.5rem 3rem;
+             z-index: 10000;
+        }
+
+    } // alert-wrapper
 
     .header-content {
 
@@ -129,6 +146,23 @@
 
 @media screen and (max-width:480px){
     .header-wrapper {
+
+        .alert-wrapper {
+            top:2%;
+            right: 3%;
+    
+            .form-alert {
+                 border-radius: 6px;
+                 padding: 0.9rem 1.1rem;
+                 strong {
+                     font-size: 12px;
+                 }
+                 span {
+                     font-size: 11px;
+                 }
+            }
+    
+        } // alert-wrapper
 
         .header-content {
             top: 55%;

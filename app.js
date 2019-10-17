@@ -1,8 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const hbs = require('express-handlebars');
+var ejs = require('ejs');
 const path = require('path');
-const nodemailer = require('nodemailer');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+//const flash = require('connect-flash');
+const flash = require('express-flash');
 
 const ENV = require('dotenv');
 ENV.config();
@@ -10,10 +14,18 @@ ENV.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const baseUrl = 'http://localhost:3000';
+const baseUrl = 'http://localhost:3000/#contact-me';
+
+
 // view engine setup
-app.engine('handlebars', hbs());
-app.set('view engine', 'handlebars');
+//app.engine('handlebars', hbs());
+app.set('view engine', 'ejs');
+
+
+
+app.use(cookieParser('secret'));
+app.use(session({ cookie: { maxAge: 60000 } }));
+app.use(flash());
 
 
 // static folder
@@ -24,10 +36,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', { msg: '' });
 });
 
-app.post('/send', (req, res) => {
+app.post('/', (req, res) => {
     const output = `
         <p>You have a new contact request</p>
         <h3>Contact details</h3>
@@ -55,50 +67,16 @@ app.post('/send', (req, res) => {
                 console.log(error);
             }
             else {
-                res.redirect(baseUrl);
+                handleRedirect(req, res);
+                // res.redirect(baseUrl);
             }
         });
 
-    // console.log('Name is : ' + req.body.name);
-    // console.log('Email is : ' + req.body.email);
-    // console.log('Message is : ' + req.body.message);
-
-    // create reusable transporter object using the default SMTP transport
-    // let transporter = nodemailer.createTransport({
-    //     host: 'mail.rusaidmrd.com',
-    //     port: 465,
-    //     secure: true, // true for 465, false for other ports
-    //     auth: {
-    //         user: 'me@rusaidmrd.com', // generated ethereal user
-    //         pass: 'k4J6Z18hhi286998' // generated ethereal password
-    //     },
-    //     tls: {
-    //         // do not fail on invalid certs
-    //         rejectUnauthorized: false
-    //     }
-    // });
-
-    // // send mail with defined transport object
-    // let mailOptions = {
-    //     from: '"me@rusaidmrd.com contact 👻" <me@rusaidmrd.com>', // sender address
-    //     to: 'rusaidpro@gmail.com', // list of receivers
-    //     subject: 'Email from rusaidmrd.com ✔', // Subject line
-    //     text: 'Hello world?', // plain text body
-    //     html: output // html body
-    // };
-
-    // transporter.sendMail(mailOptions, (error, info) => {
-    //     if (error) {
-    //         console.log(error)
-    //     }
-    //     console.log('Message sent: %s', info.messageId);
-    //     console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-    //     res.render('index', { msg: 'Email has been sent' });
-
-    // });
-
-
-
 });
+
+
+function handleRedirect(req, res) {
+    res.render('index', { msg: 'Tnanks for your message, I\'ll be in touch soon !!' });
+}
 
 app.listen(PORT, () => console.log('Server Started at ' + PORT));
