@@ -1,2 +1,2 @@
-# shoeApp
-The code files for responsive landing page for the shoe app
+# RusaidMRD
+The personal portfolio website handcoded by RusaidMRD
