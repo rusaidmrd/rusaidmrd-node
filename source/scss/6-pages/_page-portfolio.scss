@@ -1,6 +1,6 @@
 .portfolio {
     padding: 65px 0px;
-    background:$back-light;
+    background:$background-light;
 
     .title-wrapper {
         text-align: center;
@@ -20,6 +20,8 @@
             .info-wrap {
                 align-self: center;
                 text-align: center;
+                display: flex;
+                flex-direction: column;
                 p {
                     margin:20px auto 40px auto;
                     width: 70%;
